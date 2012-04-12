@@ -1,0 +1,9 @@
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\bin\Release\SteamExtend.exe
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\bin\Release\SteamExtend.pdb
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\obj\x86\Release\ResolveAssemblyReference.cache
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\obj\x86\Release\SteamExtend.Form1.resources
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\obj\x86\Release\SteamExtend.Properties.Resources.resources
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\obj\x86\Release\GenerateResource.read.1.tlog
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\obj\x86\Release\GenerateResource.write.1.tlog
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\obj\x86\Release\SteamExtend.exe
+c:\users\meoiswa\documents\visual studio 2010\Projects\SteamExtend\SteamExtend\obj\x86\Release\SteamExtend.pdb
