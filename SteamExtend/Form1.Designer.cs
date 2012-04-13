@@ -52,6 +52,7 @@
             // 
             // textBoxSteamSource
             // 
+            this.textBoxSteamSource.Enabled = false;
             this.textBoxSteamSource.Location = new System.Drawing.Point(12, 25);
             this.textBoxSteamSource.Name = "textBoxSteamSource";
             this.textBoxSteamSource.Size = new System.Drawing.Size(564, 20);
@@ -78,6 +79,7 @@
             // 
             // textBoxSteamDest
             // 
+            this.textBoxSteamDest.Enabled = false;
             this.textBoxSteamDest.Location = new System.Drawing.Point(12, 64);
             this.textBoxSteamDest.Name = "textBoxSteamDest";
             this.textBoxSteamDest.Size = new System.Drawing.Size(564, 20);

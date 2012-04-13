@@ -105,7 +105,7 @@ namespace SteamExtend
                 {
                     Directory.CreateDirectory(Dest.FullName);
                 }
-
+                
                 File.Copy(Source.FullName + "\\Steam.exe", Dest.FullName + "\\Steam.exe");
                 DirectoryInfo DestApps = Directory.CreateDirectory(Dest.FullName + "\\SteamApps");
                
@@ -116,11 +116,32 @@ namespace SteamExtend
                     mklink.Start();
                 }
                 foreach (DirectoryInfo dir in SourceApps.GetDirectories()) {
-                    Process mklink = new Process();
-                    mklink.StartInfo.FileName = "cmd";
-                    mklink.StartInfo.Arguments = "/C mklink /D \"" + DestApps.FullName + "\\" + dir.Name + "\" \"" + dir.FullName + "\"";
-                    mklink.Start();
+                    if (dir.Name != "common")
+                    {
+                        Process mklink = new Process();
+                        mklink.StartInfo.FileName = "cmd";
+                        mklink.StartInfo.Arguments = "/C mklink /D \"" + DestApps.FullName + "\\" + dir.Name + "\" \"" + dir.FullName + "\"";
+                        mklink.Start();
+                    }
+                    else
+                    {
+                        DirectoryInfo DestCommon = Directory.CreateDirectory(DestApps.FullName + "\\common");
+                        foreach (FileInfo subfile in dir.GetFiles()) {
+                            Process mklink = new Process();
+                            mklink.StartInfo.FileName = "cmd";
+                            mklink.StartInfo.Arguments = "/C mklink \"" + DestCommon.FullName + "\\" + subfile.Name + "\" \"" + subfile.FullName + "\"";
+                            mklink.Start();
+                        }
+                        foreach (DirectoryInfo subdir in dir.GetDirectories())
+                        {
+                            Process mklink = new Process();
+                            mklink.StartInfo.FileName = "cmd";
+                            mklink.StartInfo.Arguments = "/C mklink /D \"" + DestCommon.FullName + "\\" + subdir.Name + "\" \"" + subdir.FullName + "\"";
+                            mklink.Start();
+                        }
+                    }
                 }
+
                 MessageBox.Show("Task completed.");
                 Cursor.Current = Cursors.Default;
 
